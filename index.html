@@ -1,0 +1,51 @@
+﻿<html>
+<head>
+  <title>Google Spreadsheet書き込みテスト</title>
+  <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+  <script type="text/javascript">
+    function disp(){
+      // 「OK」時の処理開始 ＋ 確認ダイアログの表示
+      if(window.confirm('本当にいいんですね？')){
+        //FORMデータを送信する
+        document.getElementById("formman").submit();
+        document.getElementById("kinoko").innerHTML = "<b>ありがとう</b>";  
+      }else{
+        window.alert('キャンセルされました'); // 警告ダイアログを表示
+      }
+    }
+  </script>
+ 
+</head>
+  <body>
+    <div id="kinoko">
+      <form id="formman" action="ここにPOST側ウェブアプリケーションURLを入れる" method="post" target="_blank">
+        
+        ニックネーム：<input type="text" name="name" id="input1"/><p>
+        性別：  
+        <input type="radio" name="sex" id="input2" value="男" />男  
+        <input type="radio" name="sex" id="input3" value="女" />女<p>
+        好きな食べ物：  
+        
+        <select name="food" id="input4">  
+          <option value="すき焼き">すき焼き</option>  
+          <option value="寿司">寿司</option>  
+          <option value="天ぷら">天ぷら</option>  
+          <option value="あげパン">あげパン</option>  
+          <option value="カレーライス">カレーライス</option>  
+        </select><p>
+        愛車：
+        <select name="mycar" id="input5">
+          <option value="GT-R">スカイラインGT-R</option>
+          <option value="トレノ">スプリンタートレノ</option>
+          <option value="シビック">シビックEK9</option>
+          <option value="インプレッサ">インプレッサ</option>
+          <option value="ランエボ">ランサーエボリューション</option>
+        </select><p>
+        <center>
+          <p><input type="button" value="確認ダイアログ" onClick="disp()" class="action"></p>
+        </center>
+      </form>
+    </div>
+    
+  </body>
+</html>
