@@ -18,27 +18,7 @@
 </head>
   <body>
     <div id="kinoko">
-      <form id="formman" action="javascript: (function() { 
- var prj = "T-kazu-Note";
- var cat = "#WebScrap%5Cn";
- var title = window.prompt("Scrap Scrapbox to " + prj , document.title);
- var toDoubleDigits = function(num) { num += "";
-  if (num.length === 1) {num = "0" + num;} return num; };
- var date = new Date();
- var yyyy = date.getFullYear();
- var mm = toDoubleDigits(date.getMonth() + 1);
- var dd = toDoubleDigits(date.getDate());
- var hh = toDoubleDigits(date.getHours());
- var MM = toDoubleDigits(date.getMinutes());
- var ymdtag = "#" + yyyy + " #" + mm + dd + " " + hh + ":" + MM + "%5Cn";
-  if (!title) return;
- var lines = ["", "[" + window.location.href + " " + document.title + "]"];
- var quote = window.getSelection().toString();
-  if (quote.trim()) lines = lines.concat(quote.split(/%5Cn/g).map(function(line) { return "> " + line })); lines.push("");
- var body = encodeURIComponent(ymdtag + cat + lines.join("%5Cn"));
-  window.open("https://scrapbox.io/" + prj + "/" + "WebScrap" + "?body=" + body) })();
-  " method="post" target="_blank">
-        
+      <form id="formman" action="javascript: (function() {  var prj = "T-kazu-Note"; var cat = "#WebScrap%5Cn"; var title = window.prompt("Scrap Scrapbox to " + prj , document.title); var toDoubleDigits = function(num) { num += "";  if (num.length === 1) {num = "0" + num;} return num; }; var date = new Date(); var yyyy = date.getFullYear(); var mm = toDoubleDigits(date.getMonth() + 1); var dd = toDoubleDigits(date.getDate()); var hh = toDoubleDigits(date.getHours()); var MM = toDoubleDigits(date.getMinutes()); var ymdtag = "#" + yyyy + " #" + mm + dd + " " + hh + ":" + MM + "%5Cn";  if (!title) return; var lines = ["", "[" + window.location.href + " " + document.title + "]"]; var quote = window.getSelection().toString();  if (quote.trim()) lines = lines.concat(quote.split(/%5Cn/g).map(function(line) { return "> " + line })); lines.push(""); var body = encodeURIComponent(ymdtag + cat + lines.join("%5Cn"));  window.open("https://scrapbox.io/" + prj + "/" + "WebScrap" + "?body=" + body) })();" method="post" target="_blank">
         ニックネーム：<input type="text" name="name" id="input1"/><p>
         性別：  
         <input type="radio" name="sex" id="input2" value="男" />男  
